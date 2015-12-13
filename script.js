@@ -29,11 +29,11 @@ else if(document.getElementsByClassName("cprice-area").length != 0)
   for(var i = 0;i<custom_pochi_price_length;i++){
       if(document.getElementsByClassName("cprice-area")[i].getElementsByTagName("span")[0].innerHTML != '<font size="1">RM</font>')
       {
-          custom_pochi_current_value = custom_pochi_price_label[i].getElementsByTagName("strong")[0].innerHTML;
+          custom_pochi_current_value = custom_pochi_price_label[i].getElementsByClassName("c-price")[0].innerHTML;
           custom_pochi_previous_value = custom_pochi_current_value;
           custom_pochi_current_value = Math.round((custom_pochi_current_value*100/custom_pochi_exchange_rate))/100;
           console.log(custom_pochi_current_value);
-          custom_pochi_price_label[i].getElementsByTagName("strong")[0].innerHTML =  '<font size="3">'+ custom_pochi_current_value + '</font>' + '<font size="1">(&yen' + custom_pochi_previous_value + ')</font>';
+          custom_pochi_price_label[i].getElementsByTagName("c-price")[0].innerHTML =  '<font size="3">'+ custom_pochi_current_value + '</font>' + '<font size="1">(&yen' + custom_pochi_previous_value + ')</font>';
           document.getElementsByClassName("cprice-area")[i].getElementsByTagName("span")[0].innerHTML = '<font size="1">RM</font>';
       }
   }
