@@ -12,6 +12,7 @@ if(document.getElementsByClassName("g_price").length != 0)
   for(var i = 0;i<custom_pochi_price_length;i++){
     if(document.getElementsByClassName("g_price").className == "g_price")
     {
+      console.log("if-else the g_price success!");
       if(document.getElementsByClassName("g_price")[i].getElementsByTagName("span")[0].innerHTML != '<font size="1">RM</font>')
       {
         console.log("Changing the g_price");
