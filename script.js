@@ -67,4 +67,4 @@ else if(document.getElementsByClassName("cprice-area").length != 0)
       }
   }
 }
-}
+
