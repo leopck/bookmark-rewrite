@@ -10,6 +10,7 @@ if(document.getElementsByClassName("g_price").length != 0)
   custom_pochi_price_length  =  document.getElementsByClassName("g_price").length;
   custom_pochi_price_label  =  document.getElementsByClassName("g_price");
   for(var i = 0;i<custom_pochi_price_length;i++){
+    console.log(document.getElementsByClassName("g_price").className);
     if(document.getElementsByClassName("g_price").className == "g_price")
     {
       console.log("if-else the g_price success!");
