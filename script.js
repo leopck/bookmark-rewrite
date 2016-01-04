@@ -28,9 +28,10 @@ if(document.getElementsByClassName("g_price").length != 0)
     }
   }
   
-  if(!document.getElementsByClassName("g_price")[i].getElementsByTagName("span"))
-  {
+
     for(var i = 0;i<custom_pochi_price_length;i++){
+      if(!document.getElementsByClassName("g_price")[i].getElementsByTagName("span"))
+      {
         if(document.getElementsByClassName("g_price")[i].getElementsByTagName("span")[0].innerHTML != '<font size="1">RM</font>')
         {
           if(custom_pochi_price_label[i].getElementsByTagName("strong")[0] === 'undefined')
@@ -47,8 +48,8 @@ if(document.getElementsByClassName("g_price").length != 0)
             document.getElementsByClassName("g_price")[i].getElementsByTagName("span")[0].innerHTML = '<font size="1">RM</font>';
           }
         }
+      }
     }
-  }
 }
 
 else if(document.getElementsByClassName("cprice-area").length != 0)
