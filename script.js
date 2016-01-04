@@ -10,6 +10,8 @@ if(document.getElementsByClassName("g_price").length != 0)
   custom_pochi_price_length  =  document.getElementsByClassName("g_price").length;
   custom_pochi_price_label  =  document.getElementsByClassName("g_price");
   for(var i = 0;i<custom_pochi_price_length;i++){
+    if(document.getElementsByClassName("g_price").className == "g_price")
+    {
       if(document.getElementsByClassName("g_price")[i].getElementsByTagName("span")[0].innerHTML != '<font size="1">RM</font>')
       {
           custom_pochi_current_value = custom_pochi_price_label[i].getElementsByTagName("strong")[0].innerHTML;
@@ -19,6 +21,7 @@ if(document.getElementsByClassName("g_price").length != 0)
           custom_pochi_price_label[i].getElementsByTagName("strong")[0].innerHTML =  '<font size="3">'+ custom_pochi_current_value + '</font>' + '<font size="1">(&yen' + custom_pochi_previous_value + ')</font>';
           document.getElementsByClassName("g_price")[i].getElementsByTagName("span")[0].innerHTML = '<font size="1">RM</font>';
       }
+    }
   }
 }
 
@@ -27,6 +30,8 @@ else if(document.getElementsByClassName("cprice-area").length != 0)
   custom_pochi_price_length  =  document.getElementsByClassName("cprice-area").length;
   custom_pochi_price_label  =  document.getElementsByClassName("cprice-area");
   for(var i = 0;i<custom_pochi_price_length;i++){
+    if(document.getElementsByClassName("cprice-area").className == "cprice-area")
+    {
       if(document.getElementsByClassName("cprice-area")[i].getElementsByClassName("symbol")[0].innerHTML != '<font size="1">RM</font>')
       {
           custom_pochi_current_value = custom_pochi_price_label[i].getElementsByClassName("c-price")[0].innerHTML;
@@ -36,5 +41,6 @@ else if(document.getElementsByClassName("cprice-area").length != 0)
           custom_pochi_price_label[i].getElementsByClassName("c-price")[0].innerHTML =  '<font size="3">'+ custom_pochi_current_value + '</font>' + '<font size="1">(&yen' + custom_pochi_previous_value + ')</font>';
           document.getElementsByClassName("cprice-area")[i].getElementsByClassName("symbol")[0].innerHTML = '<font size="1">RM</font>';
       }
+    }
   }
 }
