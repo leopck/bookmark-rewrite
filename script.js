@@ -1,4 +1,4 @@
-var custom_pochi_exchange_rate  =  1.43;
+var custom_pochi_exchange_rate  =  1.56;
 var custom_pochi_price_length;
 var custom_pochi_price_label;
 var custom_pochi_current_value;
